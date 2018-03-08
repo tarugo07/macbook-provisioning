@@ -33,6 +33,7 @@
       - { name: intellij-idea }
       - { name: java8 }
       - { name: slack }
+      - { name: sourcetree }
       - { name: xquartz }
   tasks:
     - name: add repository for homebrew tap
