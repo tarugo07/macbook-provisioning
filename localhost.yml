@@ -1,0 +1,64 @@
+---
+- hosts: default
+  gather_facts: no
+  vars:
+    homebrew_taps:
+      - caskroom/cask
+      - caskroom/versions
+      - homebrew/versions
+      - homebrew/boneyard
+    homebrew_packages:
+      - { name: colordiff }
+      - { name: coreutils }
+      - { name: curl }
+      - { name: emacs }
+      - { name: ghq }
+      - { name: git }
+      - { name: git-flow }
+      - { name: jq }
+      - { name: peco }
+      - { name: the_silver_searcher }
+      - { name: tmux }
+      - { name: tree }
+      - { name: wget }
+      - { name: zsh }
+    homebrew_cask_packages:
+      - { name: 1password }
+      - { name: alfred }
+      - { name: atom }
+      - { name: docker }
+      - { name: firefox }
+      - { name: google-chrome }
+      - { name: google-japanese-ime }
+      - { name: intellij-idea }
+      - { name: java8 }
+      - { name: slack }
+      - { name: xquartz }
+  tasks:
+    - name: add repository for homebrew tap
+      homebrew_tap:
+        name: "{{ item }}"
+        state: present
+      with_items: "{{ homebrew_taps }}"
+
+    - name: update homebrew
+      homebrew:
+        update_homebrew: yes
+
+    - name: install brew package
+      homebrew:
+        name: "{{ item.name }}"
+        state: "{{ item.state | default('present') }}"
+        install_options: "{{
+          item.install_options | default() | join(',')
+          if item.install_options is not string
+          else item.install_options
+        }}"
+      with_items: "{{homebrew_packages}}"
+
+    - name: install brew cask packages
+      homebrew_cask:
+        name: "{{ item.name }}"
+        state: "{{ item.state | default('present') }}"
+        install_options: "appdir=/Applications"
+      with_items: "{{ homebrew_cask_packages }}"
