@@ -27,10 +27,12 @@
       - { name: alfred }
       - { name: atom }
       - { name: docker }
+      - { name: emacs-mac }
       - { name: firefox }
       - { name: google-chrome }
       - { name: google-japanese-ime }
       - { name: intellij-idea }
+      - { name: iterm2 }
       - { name: java8 }
       - { name: slack }
       - { name: sourcetree }
