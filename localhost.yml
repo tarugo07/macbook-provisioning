@@ -12,6 +12,7 @@
       - { name: coreutils }
       - { name: curl }
       - { name: fontforge }
+      - { name: fzf }
       - { name: ghq }
       - { name: git }
       - { name: git-flow }
