@@ -6,15 +6,19 @@
       - caskroom/cask
       - caskroom/versions
       - homebrew/boneyard
+      - sanemat/font
     homebrew_packages:
       - { name: colordiff }
       - { name: coreutils }
       - { name: curl }
+      - { name: fontforge }
       - { name: ghq }
       - { name: git }
       - { name: git-flow }
       - { name: jq }
       - { name: peco }
+      - { name: reattach-to-user-namespace }
+      - { name: ricty }
       - { name: the_silver_searcher }
       - { name: tmux }
       - { name: tree }
@@ -63,3 +67,13 @@
         state: "{{ item.state | default('present') }}"
         install_options: "appdir=/Applications"
       with_items: "{{ homebrew_cask_packages }}"
+
+    - name: copy ricty font
+      shell: "cp -f $(brew --cellar ricty)/*/share/fonts/Ricty*.ttf ~/Library/Fonts/"
+      args:
+        creates: ~/Library/Fonts/Ricty-Bold.ttf
+      notify: run fc-cache
+
+  handlers:
+    - name: run fc-cache
+      shell: fc-cache -vf
