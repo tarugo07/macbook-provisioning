@@ -5,13 +5,11 @@
     homebrew_taps:
       - caskroom/cask
       - caskroom/versions
-      - homebrew/versions
       - homebrew/boneyard
     homebrew_packages:
       - { name: colordiff }
       - { name: coreutils }
       - { name: curl }
-      - { name: emacs }
       - { name: ghq }
       - { name: git }
       - { name: git-flow }
@@ -27,7 +25,7 @@
       - { name: alfred }
       - { name: atom }
       - { name: docker }
-      - { name: emacs-mac }
+      - { name: emacs }
       - { name: firefox }
       - { name: google-chrome }
       - { name: google-japanese-ime }
