@@ -11,7 +11,9 @@
       - { name: colordiff }
       - { name: coreutils }
       - { name: curl }
+      - { name: dvm }
       - { name: fontforge }
+      - { name: flyway }
       - { name: fzf }
       - { name: ghq }
       - { name: git }
@@ -24,6 +26,7 @@
       - { name: tmux }
       - { name: tree }
       - { name: wget }
+      - { name: zsh-completions }
       - { name: zsh }
     homebrew_cask_packages:
       - { name: 1password }
