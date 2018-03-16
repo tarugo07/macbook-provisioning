@@ -8,6 +8,7 @@
       - homebrew/boneyard
       - sanemat/font
     homebrew_packages:
+      - { name: awscli }
       - { name: colordiff }
       - { name: coreutils }
       - { name: curl }
