@@ -18,6 +18,7 @@
       - { name: ghq }
       - { name: git }
       - { name: git-flow }
+      - { name: go }
       - { name: hub }
       - { name: jq }
       - { name: peco }
