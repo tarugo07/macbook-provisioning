@@ -22,6 +22,8 @@
       - { name: go }
       - { name: hub }
       - { name: jq }
+      - { name: kubectl }
+      - { name: kubernetes-helm }
       - { name: peco }
       - { name: reattach-to-user-namespace }
       - { name: ricty }
