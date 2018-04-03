@@ -13,6 +13,7 @@
       - { name: coreutils }
       - { name: curl }
       - { name: dvm }
+      - { name: direnv }
       - { name: fontforge }
       - { name: flyway }
       - { name: fzf }
@@ -27,6 +28,8 @@
       - { name: peco }
       - { name: reattach-to-user-namespace }
       - { name: ricty }
+      - { name: sbt }
+      - { name: scala }
       - { name: the_silver_searcher }
       - { name: tmux }
       - { name: tree }
