@@ -12,8 +12,9 @@
       - { name: colordiff }
       - { name: coreutils }
       - { name: curl }
-      - { name: dvm }
       - { name: direnv }
+      - { name: docker-machine-driver-xhyve }
+      - { name: dvm }
       - { name: fontforge }
       - { name: flyway }
       - { name: fzf }
@@ -24,6 +25,7 @@
       - { name: hub }
       - { name: jq }
       - { name: kubectl }
+      - { name: kubectx }
       - { name: kubernetes-helm }
       - { name: peco }
       - { name: reattach-to-user-namespace }
@@ -48,6 +50,7 @@
       - { name: intellij-idea }
       - { name: iterm2 }
       - { name: java8 }
+      - { name: minikube }
       - { name: slack }
       - { name: sourcetree }
       - { name: xquartz }
