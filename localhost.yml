@@ -24,6 +24,7 @@
       - { name: go }
       - { name: hub }
       - { name: jq }
+      - { name: kafka }
       - { name: kubectl }
       - { name: kubectx }
       - { name: kubernetes-helm }
