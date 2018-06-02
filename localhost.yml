@@ -29,6 +29,7 @@
       - { name: kubernetes-helm }
       - { name: peco }
       - { name: reattach-to-user-namespace }
+      - { name: rbenv }
       - { name: ricty }
       - { name: sbt }
       - { name: scala }
