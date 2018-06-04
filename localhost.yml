@@ -3,9 +3,10 @@
   gather_facts: no
   vars:
     homebrew_taps:
+      - homebrew/boneyard
       - homebrew/cask
       - homebrew/cask-versions
-      - homebrew/boneyard
+      - jenkins-x/jx
       - sanemat/font
     homebrew_packages:
       - { name: awscli }
@@ -24,6 +25,7 @@
       - { name: go }
       - { name: hub }
       - { name: jq }
+      - { name: jx }
       - { name: kafka }
       - { name: kubectl }
       - { name: kubectx }
