@@ -43,7 +43,7 @@
       - { name: zsh-completions }
       - { name: zsh }
     homebrew_cask_packages:
-      - { name: 1password }
+      - { name: 1password6 }
       - { name: alfred }
       - { name: atom }
       - { name: docker }
