@@ -51,12 +51,12 @@
       - { name: firefox }
       - { name: google-chrome }
       - { name: google-japanese-ime }
-      - { name: intellij-idea }
       - { name: iterm2 }
       - { name: java8 }
       - { name: minikube }
       - { name: slack }
       - { name: sourcetree }
+      - { name: jetbrains-toolbox }
       - { name: xquartz }
   tasks:
     - name: add repository for homebrew tap
