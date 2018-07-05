@@ -33,6 +33,7 @@
       - { name: peco }
       - { name: reattach-to-user-namespace }
       - { name: rbenv }
+      - { name: redis }
       - { name: ricty }
       - { name: sbt }
       - { name: scala }
