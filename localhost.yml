@@ -30,6 +30,7 @@
       - { name: kubectl }
       - { name: kubectx }
       - { name: kubernetes-helm }
+      - { name: maven }
       - { name: peco }
       - { name: reattach-to-user-namespace }
       - { name: rbenv }
