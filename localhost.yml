@@ -38,6 +38,7 @@
       - { name: ricty }
       - { name: sbt }
       - { name: scala }
+      - { name: tfenv }
       - { name: the_silver_searcher }
       - { name: tmux }
       - { name: tree }
