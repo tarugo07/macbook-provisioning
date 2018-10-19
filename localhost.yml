@@ -24,6 +24,7 @@
       - { name: git-flow }
       - { name: go }
       - { name: hub }
+      - { name: jenv }
       - { name: jq }
       - { name: jx }
       - { name: kafka }
