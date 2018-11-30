@@ -49,6 +49,7 @@
     homebrew_cask_packages:
       - { name: alfred }
       - { name: atom }
+      - { name: clipy }
       - { name: docker }
       - { name: emacs }
       - { name: firefox }
