@@ -3,6 +3,7 @@
   gather_facts: no
   vars:
     homebrew_taps:
+      - c-bata/kube-prompt
       - homebrew/boneyard
       - homebrew/cask
       - homebrew/cask-versions
@@ -31,6 +32,7 @@
       - { name: kubectl }
       - { name: kubectx }
       - { name: kubernetes-helm }
+      - { name: kube-prompt }
       - { name: maven }
       - { name: peco }
       - { name: reattach-to-user-namespace }
