@@ -4,7 +4,6 @@
   vars:
     homebrew_taps:
       - c-bata/kube-prompt
-      - homebrew/boneyard
       - homebrew/cask
       - homebrew/cask-versions
       - jenkins-x/jx
