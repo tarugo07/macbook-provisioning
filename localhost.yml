@@ -58,12 +58,13 @@
       - { name: google-chrome }
       - { name: google-japanese-ime }
       - { name: iterm2 }
-      - { name: java8 }
+      # - { name: java8 }
+      - { name: jetbrains-toolbox }
       - { name: minikube }
       - { name: slack }
       - { name: sourcetree }
-      - { name: jetbrains-toolbox }
       - { name: xquartz }
+      - { name: visual-studio-code }
   tasks:
     - name: add repository for homebrew tap
       homebrew_tap:
