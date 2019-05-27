@@ -28,6 +28,7 @@
       - { name: jq }
       - { name: jx }
       - { name: kafka }
+      - { name: knqyf263/pet/pet }
       - { name: kubectl }
       - { name: kubectx }
       - { name: kubernetes-helm }
