@@ -9,6 +9,7 @@
       - jenkins-x/jx
       - sanemat/font
     homebrew_packages:
+      # - { name: anyenv }
       - { name: awscli }
       - { name: colordiff }
       - { name: coreutils }
@@ -61,11 +62,12 @@
       - { name: iterm2 }
       # - { name: java8 }
       - { name: jetbrains-toolbox }
+      - { name: memo }
       - { name: minikube }
       - { name: slack }
       - { name: sourcetree }
-      - { name: xquartz }
       - { name: visual-studio-code }
+      - { name: xquartz }
   tasks:
     - name: add repository for homebrew tap
       homebrew_tap:
