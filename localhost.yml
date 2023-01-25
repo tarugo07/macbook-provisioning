@@ -6,7 +6,6 @@
       - c-bata/kube-prompt
       - homebrew/cask
       - homebrew/cask-versions
-      - jenkins-x/jx
       - sanemat/font
     homebrew_packages:
       # - { name: anyenv }
@@ -15,10 +14,7 @@
       - { name: coreutils }
       - { name: curl }
       - { name: direnv }
-      - { name: docker-machine-driver-xhyve }
-      - { name: dvm }
       - { name: fontforge }
-      - { name: flyway }
       - { name: fzf }
       - { name: ghq }
       - { name: git }
@@ -27,18 +23,20 @@
       - { name: hub }
       - { name: jenv }
       - { name: jq }
-      - { name: jx }
-      - { name: kafka }
       - { name: knqyf263/pet/pet }
-      - { name: kubectl }
       - { name: kubectx }
+      - { name: kubernetes-cli }
       - { name: kubernetes-helm }
       - { name: kube-prompt }
       - { name: maven }
+      - { name: openjdk@11 }
       - { name: peco }
-      - { name: reattach-to-user-namespace }
+      - { name: pipenv }
+      - { name: pyenv }
+      - { name: python@3.11 }
+      - { name: pyyaml }
       - { name: rbenv }
-      - { name: redis }
+      - { name: reattach-to-user-namespace }
       - { name: ricty }
       - { name: sbt }
       - { name: scala }
@@ -52,17 +50,17 @@
       - { name: zsh }
     homebrew_cask_packages:
       - { name: alfred }
-      - { name: atom }
       - { name: clipy }
+      - { name: deepl }
       - { name: docker }
       - { name: emacs }
       - { name: firefox }
       - { name: google-chrome }
       - { name: google-japanese-ime }
       - { name: iterm2 }
-      # - { name: java8 }
       - { name: jetbrains-toolbox }
       - { name: memo }
+      - { name: mactex }
       - { name: minikube }
       - { name: slack }
       - { name: sourcetree }
