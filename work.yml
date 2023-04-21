@@ -1,0 +1,107 @@
+---
+- hosts: default
+  gather_facts: no
+  vars:
+    homebrew_taps:
+      - c-bata/kube-prompt
+      - homebrew/cask
+      - homebrew/cask-versions
+      - sanemat/font
+    homebrew_packages:
+      # - { name: anyenv }
+      - { name: awscli }
+      - { name: colordiff }
+      - { name: coreutils }
+      - { name: curl }
+      - { name: direnv }
+      - { name: fontforge }
+      - { name: fzf }
+      - { name: ghq }
+      - { name: git }
+      - { name: git-flow }
+      - { name: go }
+      - { name: golangci-lint }
+      - { name: hub }
+      - { name: jenv }
+      - { name: jq }
+      - { name: kind }
+      - { name: knqyf263/pet/pet }
+      - { name: kubectx }
+      - { name: kubernetes-cli }
+      - { name: helm }
+      - { name: kube-prompt }
+      - { name: maven }
+      - { name: minikube }
+      - { name: mysql-client }
+      - { name: openjdk@11 }
+      - { name: peco }
+      - { name: pipenv }
+      - { name: pyenv }
+      - { name: python@3.11 }
+      - { name: pyyaml }
+      - { name: reattach-to-user-namespace }
+      - { name: ricty }
+      - { name: shellcheck }
+      - { name: staticcheck }
+      - { name: stern }
+      - { name: tfenv }
+      - { name: the_silver_searcher }
+      - { name: tmux }
+      - { name: tree }
+      - { name: wget }
+      - { name: yq }
+      - { name: zsh-completions }
+      - { name: zsh }
+    homebrew_cask_packages:
+      - { name: alfred }
+      - { name: clipy }
+      - { name: corretto11 }
+      - { name: deepl }
+      - { name: docker }
+      - { name: emacs }
+      - { name: firefox }
+      - { name: google-japanese-ime }
+      - { name: iterm2 }
+      - { name: jetbrains-toolbox }
+      - { name: slack }
+      - { name: sourcetree }
+      - { name: visual-studio-code }
+      - { name: xquartz }
+  tasks:
+    - name: add repository for homebrew tap
+      homebrew_tap:
+        name: "{{ item }}"
+        state: present
+      with_items: "{{ homebrew_taps }}"
+
+    - name: update homebrew
+      homebrew:
+        update_homebrew: yes
+
+    - name: install brew package
+      homebrew:
+        name: "{{ item.name }}"
+        state: "{{ item.state | default('present') }}"
+        install_options: "{{
+          item.install_options | default() | join(',')
+          if item.install_options is not string
+          else item.install_options
+        }}"
+      with_items: "{{homebrew_packages}}"
+
+    - name: install brew cask packages
+      homebrew_cask:
+        name: "{{ item.name }}"
+        state: "{{ item.state | default('present') }}"
+        install_options: "appdir=/Applications"
+      with_items: "{{ homebrew_cask_packages }}"
+
+    - name: copy ricty font
+      shell: "cp -f $(brew --cellar ricty)/*/share/fonts/Ricty*.ttf ~/Library/Fonts/"
+      args:
+        creates: ~/Library/Fonts/Ricty-Bold.ttf
+      notify: run fc-cache
+
+  handlers:
+    - name: run fc-cache
+      shell: fc-cache -vf
