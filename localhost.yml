@@ -39,8 +39,6 @@
       - { name: rbenv }
       - { name: reattach-to-user-namespace }
       - { name: ricty }
-      - { name: sbt }
-      - { name: scala }
       - { name: stern }
       - { name: tfenv }
       - { name: the_silver_searcher }
