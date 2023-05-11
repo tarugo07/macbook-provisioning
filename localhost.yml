@@ -4,7 +4,6 @@
   vars:
     homebrew_taps:
       - c-bata/kube-prompt
-      - homebrew/cask
       - homebrew/cask-versions
       - sanemat/font
     homebrew_packages:
