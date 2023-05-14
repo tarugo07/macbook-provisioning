@@ -5,6 +5,7 @@
     homebrew_taps:
       - c-bata/kube-prompt
       - homebrew/cask-versions
+      - homebrew/core
       - sanemat/font
     homebrew_packages:
       # - { name: anyenv }
