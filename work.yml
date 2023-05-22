@@ -27,7 +27,6 @@
       - { name: kind }
       - { name: knqyf263/pet/pet }
       - { name: kubectx }
-      - { name: kubernetes-cli }
       - { name: helm }
       - { name: kube-prompt }
       - { name: maven }
