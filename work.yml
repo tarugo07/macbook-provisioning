@@ -5,11 +5,13 @@
     homebrew_taps:
       - c-bata/kube-prompt
       - homebrew/cask-versions
-      - homebrew/core
+#      - homebrew/core
       - sanemat/font
+      - weaveworks/tap
     homebrew_packages:
       # - { name: anyenv }
       - { name: awscli }
+      - { name: aws-iam-authenticator }
       - { name: colordiff }
       - { name: coreutils }
       - { name: curl }
@@ -27,6 +29,7 @@
       - { name: kind }
       - { name: knqyf263/pet/pet }
       - { name: kubectx }
+      - { name: kubernetes-cli }
       - { name: helm }
       - { name: kube-prompt }
       - { name: maven }
@@ -47,6 +50,7 @@
       - { name: the_silver_searcher }
       - { name: tmux }
       - { name: tree }
+      - { name: weaveworks/tap/eksctl }
       - { name: wget }
       - { name: yq }
       - { name: zsh-completions }
