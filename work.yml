@@ -12,6 +12,7 @@
       # - { name: anyenv }
       - { name: awscli }
       - { name: aws-iam-authenticator }
+      - { name: cfn-lint }
       - { name: colordiff }
       - { name: coreutils }
       - { name: curl }
