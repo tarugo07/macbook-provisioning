@@ -36,7 +36,6 @@
       - { name: pyenv }
       - { name: python@3.11 }
       - { name: pyyaml }
-      - { name: rbenv }
       - { name: reattach-to-user-namespace }
       - { name: ricty }
       - { name: stern }
