@@ -1,0 +1,85 @@
+---
+- hosts: default
+  gather_facts: no
+  vars:
+    homebrew_taps:
+      - homebrew/cask-versions
+      - homebrew/core
+      - sanemat/font
+    homebrew_packages:
+      - { name: colordiff }
+      - { name: coreutils }
+      - { name: curl }
+      - { name: direnv }
+      - { name: fontforge }
+      - { name: ghq }
+      - { name: git }
+      - { name: go }
+      - { name: golangci-lint }
+      - { name: hub }
+      - { name: jq }
+      - { name: knqyf263/pet/pet }
+      - { name: openjdk@17 }
+      - { name: peco }
+      - { name: pipenv }
+      - { name: pyenv }
+      - { name: python@3.11 }
+      - { name: pyyaml }
+      - { name: reattach-to-user-namespace }
+      - { name: ricty }
+      - { name: the_silver_searcher }
+      - { name: tmux }
+      - { name: tree }
+      - { name: wget }
+      - { name: zsh-completions }
+      - { name: zsh }
+    homebrew_cask_packages:
+      - { name: alfred }
+      - { name: clipy }
+      - { name: deepl }
+      - { name: docker }
+      - { name: google-chrome }
+      - { name: google-japanese-ime }
+      - { name: iterm2 }
+      - { name: jetbrains-toolbox }
+      - { name: slack }
+      - { name: sourcetree }
+      - { name: visual-studio-code }
+  tasks:
+    - name: add repository for homebrew tap
+      homebrew_tap:
+        name: "{{ item }}"
+        state: present
+      with_items: "{{ homebrew_taps }}"
+
+    - name: update homebrew
+      homebrew:
+        update_homebrew: yes
+
+    - name: install brew package
+      homebrew:
+        name: "{{ item.name }}"
+        state: "{{ item.state | default('present') }}"
+        install_options: "{{
+          item.install_options | default() | join(',')
+          if item.install_options is not string
+          else item.install_options
+        }}"
+      with_items: "{{homebrew_packages}}"
+
+    - name: install brew cask packages
+      homebrew_cask:
+        name: "{{ item.name }}"
+        state: "{{ item.state | default('present') }}"
+        install_options: "appdir=/Applications"
+      with_items: "{{ homebrew_cask_packages }}"
+
+    - name: copy ricty font
+      shell: "cp -f $(brew --cellar ricty)/*/share/fonts/Ricty*.ttf ~/Library/Fonts/"
+      args:
+        creates: ~/Library/Fonts/Ricty-Bold.ttf
+      notify: run fc-cache
+
+  handlers:
+    - name: run fc-cache
+      shell: fc-cache -vf
