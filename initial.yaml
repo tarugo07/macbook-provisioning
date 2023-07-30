@@ -12,6 +12,7 @@
       - { name: curl }
       - { name: direnv }
       - { name: fontforge }
+      - { name: fzf }
       - { name: ghq }
       - { name: git }
       - { name: go }
@@ -45,6 +46,7 @@
       - { name: slack }
       - { name: sourcetree }
       - { name: visual-studio-code }
+      - { name: xquartz }
   tasks:
     - name: add repository for homebrew tap
       homebrew_tap:
