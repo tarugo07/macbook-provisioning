@@ -19,6 +19,7 @@
       - { name: direnv }
       - { name: fontforge }
       - { name: fzf }
+      - { name: gh }
       - { name: ghq }
       - { name: git }
       - { name: git-flow }
