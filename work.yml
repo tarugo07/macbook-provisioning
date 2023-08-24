@@ -63,7 +63,6 @@
       - { name: corretto11 }
       - { name: deepl }
       - { name: docker }
-      - { name: emacs }
       - { name: firefox }
       - { name: google-japanese-ime }
       - { name: iterm2 }
