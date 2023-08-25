@@ -60,7 +60,7 @@
     homebrew_cask_packages:
       - { name: alfred }
       - { name: clipy }
-      - { name: corretto11 }
+      - { name: corretto17 }
       - { name: deepl }
       - { name: docker }
       - { name: firefox }
