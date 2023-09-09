@@ -37,6 +37,7 @@
     homebrew_cask_packages:
       - { name: alfred }
       - { name: clipy }
+      - { name: corretto17 }
       - { name: deepl }
       - { name: docker }
       - { name: google-chrome }
