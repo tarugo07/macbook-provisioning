@@ -19,8 +19,8 @@
       - { name: golangci-lint }
       - { name: hub }
       - { name: jq }
-      - { name: knqyf263/pet/pet }
       - { name: openjdk@17 }
+      - { name: pandoc }
       - { name: peco }
       - { name: pipenv }
       - { name: pyenv }
