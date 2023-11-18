@@ -67,6 +67,7 @@
       - { name: google-japanese-ime }
       - { name: iterm2 }
       - { name: jetbrains-toolbox }
+      - { name: rectangle }
       - { name: slack }
       - { name: sourcetree }
       - { name: visual-studio-code }
